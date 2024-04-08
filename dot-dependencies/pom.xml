@@ -10,6 +10,7 @@
     <packaging>pom</packaging>
 
     <properties>
+        <projects.version>1.0.0-SNAPSHOT</projects.version>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -17,6 +18,7 @@
 
     <dependencyManagement>
         <dependencies>
+
             <!--spring-boot-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -25,6 +27,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
             <!--spring-->
 <!--            <dependency>-->
 <!--                <groupId>org.springframework</groupId>-->
@@ -33,6 +36,15 @@
 <!--                <type>pom</type>-->
 <!--                <scope>import</scope>-->
 <!--            </dependency>-->
+
+            <!--hutool-->
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-bom</artifactId>
+                <version>5.8.25</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
         </dependencies>
 
     </dependencyManagement>
