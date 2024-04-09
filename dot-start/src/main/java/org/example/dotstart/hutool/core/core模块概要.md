@@ -107,3 +107,11 @@
 #### BooleanUtil
 #### ByteUtil
 #### CharsetUtil
+#### CharUtil
+#### ClassLoaderUtil
+#### ClassUtil
+#### CoordinateUtil 经纬度（坐标）
+#### CreditCodeUtil 统一社会信用代码
+#### DesensitizedUtil 脱敏工具
+#### EnumUtil 
+
