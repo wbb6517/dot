@@ -114,4 +114,15 @@
 #### CreditCodeUtil 统一社会信用代码
 #### DesensitizedUtil 脱敏工具
 #### EnumUtil 
+#### EscapeUtil xml,html,Unicode字符串转义
+#### HashUtil 各种哈希算法
+#### HexUtil 
+#### IdcardUtil 身份证工具 
+#### IdUtil  
+#### JAXBUtil jdk21不可用。报错
+#### JdkUtil 
+#### JNDIUtil JAVA命名和目录接口（没懂干啥用的）
+#### ModifierUtil 修饰符工具类
+#### RandomUtil 
+
 
