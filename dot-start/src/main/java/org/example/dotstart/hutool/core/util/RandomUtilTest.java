@@ -17,6 +17,10 @@ import java.util.concurrent.ThreadLocalRandom;
 public class RandomUtilTest {
     public static void main(String[] args) {
 
+
+    }
+
+    private static void randomChineseTest() {
         char c = RandomUtil.randomChinese();
         char c1 = RandomUtil.randomNumber();
         char c2 = RandomUtil.randomChar();
@@ -25,11 +29,10 @@ public class RandomUtilTest {
         WeightRandom weightRandom = RandomUtil.weightRandom(new WeightRandom.WeightObj[]{new WeightRandom.WeightObj("a", 1),
                 new WeightRandom.WeightObj("b", 2),
                 new WeightRandom.WeightObj("c", 3)});
+        Object next = weightRandom.next();
 
         DateTime dateTime = RandomUtil.randomDay(5, 7);
         DateTime dateTime1 = RandomUtil.randomDate(DateUtil.date(), DateField.HOUR, 5, 10);
-
-
     }
 
     private static void randomStringTest() {
@@ -51,7 +54,7 @@ public class RandomUtilTest {
         objects.add("b");
         objects.add("c");
         List<Object> objects1 = RandomUtil.randomEles(objects, 2);
-        List<Object> objects2 = RandomUtil.randomEleList(objects, 2);
+        List<Object> objects2 = RandomUtil.randomEleList(objects, 0);
         Set<Object> objects3 = RandomUtil.randomEleSet(objects, 2);
     }
 

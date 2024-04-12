@@ -124,5 +124,13 @@
 #### JNDIUtil JAVA命名和目录接口（没懂干啥用的）
 #### ModifierUtil 修饰符工具类
 #### RandomUtil 
+#### NumberUtil 
+#### ObjectUtil(ObjUtil)
+#### PageUtil
+#### PhoneUtil
+#### PrimitiveArrayUtil 原始类型数组工具类
+#### RadixUtil 
+#### ReferenceUtil 引用工具类（垃圾回收机制有关）
+#### ReflectUtil 反射工具类
 
 
