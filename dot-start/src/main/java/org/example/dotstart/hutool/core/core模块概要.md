@@ -15,6 +15,7 @@
 
 提供了Bean工具类，以及Bean属性解析、Bean拷贝、动态Bean等。
 
+
 ### 构建器(builder)
 
 抽象了Builder接口，提供建造者模式的封装，并默认提供了包括equals封装、Bean构建封装、比较器封装等。
@@ -132,5 +133,15 @@
 #### RadixUtil 
 #### ReferenceUtil 引用工具类（垃圾回收机制有关）
 #### ReflectUtil 反射工具类
+#### ReUtil 正则表达式匹配工具类
+#### RuntimeUtil 系统运行时工具类
+#### SerializeUtil 序列化反序列化工具类
+#### ServiceLoaderUtil SPI机制中的服务加载工具类
+#### StrUtil （CharSequenceUtil）
+#### SystemPropsUtil 系统属性工具类
+#### TypeUtil 系统属性工具类
+#### URLUtil 
+#### XmlUtil 用处不大
+#### ZipUtil 压缩工具类
 
 
