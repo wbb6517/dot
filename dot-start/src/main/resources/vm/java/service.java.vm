@@ -1,0 +1,65 @@
+package ${package.Service};
+
+import ${package.Entity}.${entity};
+import ${superServiceClassPackage};
+import com.fawkes.core.base.api.ApiResponseBody;
+import com.fawkes.segment.trace.common.model.${entity};
+
+
+/**
+ * <p>
+ * $!{table.comment} 服务类
+ * </p>
+ *
+ * @author ${author}
+ * @since ${date}
+ */
+#if(${kotlin})
+interface ${table.serviceName} : ${superServiceClass}<${entity}>
+#else
+public interface ${table.serviceName} extends ${superServiceClass}<${entity}> {
+
+    /**
+     * 新增
+     * @param saveVO
+     * @return
+     */
+    ApiResponseBody<?> add(${entity}SaveVO saveVO);
+
+    /**
+     * 修改
+     * @param saveVO
+     * @return
+     */
+    ApiResponseBody<?> updateOneById(${entity}SaveVO saveVO);
+
+    /**
+     * 删除
+     * @param ids
+     * @return
+     */
+    ApiResponseBody<?> deleteById(Collection<Long> ids);
+
+    /**
+     * 查询详情
+     * @param id
+     * @return
+     */
+    ApiResponseBody<?> getOneById(Long id);
+
+    /**
+     * 查询列表
+     * @param qParam
+     * @return
+     */
+    ApiResponseBody<?> findList(${entity}QParam qParam);
+
+    /**
+     * 查询分页
+     * @param qParam
+     * @return
+     */
+    ApiResponseBody<?> findPage(${entity}QParam qParam);
+
+}
+#end

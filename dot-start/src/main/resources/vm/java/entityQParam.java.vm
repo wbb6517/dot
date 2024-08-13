@@ -1,0 +1,43 @@
+package com.fawkes.segment.trace.common.param;
+
+import com.fawkes.core.pojo.query.PageParam;
+#foreach($pkg in ${table.importPackages})
+import ${pkg};
+#end
+#if(${swagger2})
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+#end
+#if(${entityLombokModel})
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.experimental.Accessors;
+
+import java.io.Serializable;
+#end
+
+/**
+ * <p>
+ * $!{table.comment}
+ * </p>
+ *
+ * @author ${author}
+ * @since ${date}
+ */
+#if(${entityLombokModel})
+@Data
+  #if(${superEntityClass})
+@EqualsAndHashCode(callSuper = true)
+  #else
+@EqualsAndHashCode(callSuper = false)
+  #end
+@Accessors(chain = true)
+#end
+#if(${swagger2})
+@ApiModel(value="${entity}查询条件对象", description="$!{table.comment}")
+#end
+public class ${entity}QParam extends PageParam implements Serializable {
+    private static final long serialVersionUID = 1L;
+
+
+}

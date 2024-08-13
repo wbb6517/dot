@@ -1,0 +1,39 @@
+package ${package.Mapper};
+
+import ${package.Entity}.${entity};
+import ${superMapperClassPackage};
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.fawkes.core.enums.DeleteFlagEnum;
+import com.fawkes.segment.trace.common.model.${entity};
+import com.fawkes.segment.trace.common.param.${entity}QParam;
+
+import java.util.List;
+
+/**
+ * <p>
+ * $!{table.comment} Mapper 接口
+ * </p>
+ *
+ * @author ${author}
+ * @since ${date}
+ */
+
+public interface ${table.mapperName} extends ${superMapperClass}<${entity}> {
+
+    default List<${entity}> selectLists(${entity}QParam qParam){
+        return this.selectList(new LambdaQueryWrapper<${entity}>()
+                .eq(${entity}::getDeleteFlag, DeleteFlagEnum.DATA_OK)
+
+                .orderByDesc(${entity}::getId)
+        );
+    }
+
+    default List<${entity}> selectPages(${entity}QParam qParam){
+        return this.selectList(new LambdaQueryWrapper<${entity}>()
+                .eq(${entity}::getDeleteFlag, DeleteFlagEnum.DATA_OK)
+
+                .orderByDesc(${entity}::getId)
+        );
+    }
+}

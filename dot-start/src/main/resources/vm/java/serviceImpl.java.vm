@@ -1,0 +1,127 @@
+package ${package.ServiceImpl};
+
+import cn.hutool.core.lang.Assert;
+import ${package.Entity}.${entity};
+import ${package.Mapper}.${table.mapperName};
+import ${package.Service}.${table.serviceName};
+import ${superServiceImplClassPackage};
+import com.fawkes.core.base.api.ApiResponseBody;
+import com.fawkes.core.enums.DeleteFlagEnum;
+import com.fawkes.core.utils.EntityTool;
+import com.fawkes.segment.trace.common.mapper.${entity}Mapper;
+import com.fawkes.segment.trace.common.model.${entity};
+import com.fawkes.segment.trace.service.I${entity}Service;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
+import java.sql.Timestamp;
+import java.util.List;
+/**
+ * <p>
+ * $!{table.comment} 服务实现类
+ * </p>
+ *
+ * @author ${author}
+ * @since ${date}
+ */
+@Service
+public class ${table.serviceImplName} extends ${superServiceImplClass}<${table.mapperName}, ${entity}> implements ${table.serviceName} {
+
+    @Resource
+    private ${table.mapperName} mapper;
+
+    /**
+     * 新增
+     *
+     * @param saveVO
+     * @return
+     */
+    @Override
+    public ApiResponseBody<?> add(${entity}SaveVO saveVO) {
+        ${entity} bean = BeanUtil.copyProperties(saveVO, ${entity}.class);
+
+        EntityTool.insertEntity(bean);
+        mapper.insert(bean);
+        return ApiResponseBody.defaultSuccess(bean.getId().toString());
+    }
+
+    /**
+     * 修改
+     *
+     * @param saveVO
+     * @return
+     */
+    @Override
+    public ApiResponseBody<?> updateOneById(${entity}SaveVO saveVO) {
+        ${entity} bean = BeanUtil.toBean(saveVO, ${entity}.class);
+        Long id = bean.getId();
+        Assert.notNull(id, "id不能为空");
+        Assert.notNull(this.getById(id), "ID为 {} 的数据不存在", id);
+        EntityTool.updateEntity(bean);
+        mapper.updateById(bean);
+        return ApiResponseBody.defaultSuccess();
+    }
+
+    /**
+     * 删除
+     *
+     * @param ids
+     * @return
+     */
+    @Override
+    public ApiResponseBody<?> deleteById(Collection<Long> ids) {
+
+        LambdaUpdateWrapper<${entity}> updateWrapper = new LambdaUpdateWrapper<>();
+        updateWrapper.set(${entity}::getDeleteFlag, DeleteFlagEnum.DATA_WARN.getFlag())
+                .set(${entity}::getUpdateBy, HttpHeaderTool.getCurrentUser().getUserName())
+                .set(${entity}::getUpdateDate, new Timestamp(System.currentTimeMillis()))
+                .in(${entity}::getId, ids);
+        this.update(updateWrapper);
+        return ApiResponseBody.defaultSuccess();
+    }
+
+    /**
+     * 查询详情
+     *
+     * @param id
+     * @return
+     */
+    @Override
+    public ApiResponseBody<?> getOneById(Long id) {
+        ${entity} bean = mapper.selectById(id);
+        ${entity}VO beanVO = BeanUtil.toBean(bean, ${entity}VO.class);
+        return ApiResponseBody.defaultSuccess(beanVO);
+    }
+
+    /**
+     * 查询列表
+     *
+     * @param qParam
+     * @return
+     */
+    @Override
+    public ApiResponseBody<?> findList(${entity}QParam qParam) {
+        List<${entity}> list = mapper.selectLists(qParam);
+        List<${entity}ListVO> listVO = BeanUtil.copyToList(list, ${entity}ListVO.class);
+        return ApiResponseBody.defaultSuccess(listVO);
+    }
+
+    /**
+     * 查询分页
+     *
+     * @param qParam
+     * @return
+     */
+    @Override
+    public ApiResponseBody<?> findPage(${entity}QParam qParam) {
+        PageHelper.startPage(qParam.getPageNo(), qParam.getPageSize());
+        List<${entity}> list = mapper.selectPages(qParam);
+        List<${entity}ListVO> listVO = BeanUtil.copyToList(list, ${entity}ListVO.class);
+        PageInfo<${entity}ListVO> pageInfo = new PageInfo<>(listVO);
+        return ApiResponseBody.defaultSuccess(pageInfo);
+    }
+
+}
+

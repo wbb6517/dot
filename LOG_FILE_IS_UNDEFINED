@@ -1,0 +1,928 @@
+2024-07-24T16:54:13.945+08:00  INFO 19864 --- [dot-start] [main] o.example.dotstart.DotStartApplication   : Starting DotStartApplication using Java 21.0.2 with PID 19864 (F:\SourceCodeMirror\dot\dot-start\target\classes started by wbb in F:\SourceCodeMirror\dot)
+2024-07-24T16:54:13.953+08:00  INFO 19864 --- [dot-start] [main] o.example.dotstart.DotStartApplication   : The following 1 profile is active: "dev"
+2024-07-24T16:54:15.014+08:00  INFO 19864 --- [dot-start] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-07-24T16:54:15.023+08:00  INFO 19864 --- [dot-start] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-24T16:54:15.023+08:00  INFO 19864 --- [dot-start] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-07-24T16:54:15.064+08:00  INFO 19864 --- [dot-start] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-24T16:54:15.064+08:00  INFO 19864 --- [dot-start] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1075 ms
+2024-07-24T16:54:15.143+08:00  WARN 19864 --- [dot-start] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'accountController': Unsatisfied dependency expressed through field 'accountService': Error creating bean with name 'accountServiceImpl': Unsatisfied dependency expressed through field 'mapper': Error creating bean with name 'accountMapper' defined in file [F:\SourceCodeMirror\dot\dot-start\target\classes\org\example\dotstart\mybatisflex\mapper\AccountMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory': Error creating bean with name 'com.mybatisflex.spring.boot.MybatisFlexAutoConfiguration': Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'mybatis-flex-com.mybatisflex.spring.boot.MybatisFlexProperties': Could not bind properties to 'MybatisFlexProperties' : prefix=mybatis-flex, ignoreInvalidFields=false, ignoreUnknownFields=true
+2024-07-24T16:54:15.145+08:00  INFO 19864 --- [dot-start] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-07-24T16:54:15.155+08:00  INFO 19864 --- [dot-start] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-07-24T16:54:15.167+08:00 ERROR 19864 --- [dot-start] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'mybatis-flex.admin-config' to com.mybatisflex.spring.boot.MybatisFlexProperties$AdminConfig:
+
+    Reason: org.springframework.core.convert.ConverterNotFoundException: No converter found capable of converting from type [java.lang.String] to type [com.mybatisflex.spring.boot.MybatisFlexProperties$AdminConfig]
+
+Action:
+
+Update your application's configuration
+
+2024-07-24T16:54:31.510+08:00  INFO 24168 --- [dot-start] [main] o.example.dotstart.DotStartApplication   : Starting DotStartApplication using Java 21.0.2 with PID 24168 (F:\SourceCodeMirror\dot\dot-start\target\classes started by wbb in F:\SourceCodeMirror\dot)
+2024-07-24T16:54:31.512+08:00  INFO 24168 --- [dot-start] [main] o.example.dotstart.DotStartApplication   : The following 1 profile is active: "dev"
+2024-07-24T16:54:32.434+08:00  INFO 24168 --- [dot-start] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-07-24T16:54:32.441+08:00  INFO 24168 --- [dot-start] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-24T16:54:32.441+08:00  INFO 24168 --- [dot-start] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-07-24T16:54:32.473+08:00  INFO 24168 --- [dot-start] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-24T16:54:32.473+08:00  INFO 24168 --- [dot-start] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 925 ms
+2024-07-24T16:54:32.709+08:00  INFO 24168 --- [dot-start] [main] o.e.dotstart.scheduling.EasyScheduling   : 系统开始运行时间: 1721811272709 
+2024-07-24T16:54:32.721+08:00  WARN 24168 --- [dot-start] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'myRestTemplate': Injection of resource dependencies failed
+2024-07-24T16:54:32.723+08:00  INFO 24168 --- [dot-start] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-07-24T16:54:32.731+08:00  INFO 24168 --- [dot-start] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-07-24T16:54:32.741+08:00 ERROR 24168 --- [dot-start] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+A component required a bean of type 'org.springframework.web.client.RestTemplate' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.web.client.RestTemplate' in your configuration.
+
+2024-07-24T16:55:58.476+08:00  INFO 14548 --- [dot-start] [main] o.example.dotstart.DotStartApplication   : Starting DotStartApplication using Java 21.0.2 with PID 14548 (F:\SourceCodeMirror\dot\dot-start\target\classes started by wbb in F:\SourceCodeMirror\dot)
+2024-07-24T16:55:58.478+08:00  INFO 14548 --- [dot-start] [main] o.example.dotstart.DotStartApplication   : The following 1 profile is active: "dev"
+2024-07-24T16:56:00.994+08:00  INFO 14548 --- [dot-start] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-07-24T16:56:01.028+08:00  INFO 14548 --- [dot-start] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-24T16:56:01.028+08:00  INFO 14548 --- [dot-start] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-07-24T16:56:01.117+08:00  INFO 14548 --- [dot-start] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-24T16:56:01.117+08:00  INFO 14548 --- [dot-start] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2549 ms
+2024-07-24T16:56:01.621+08:00  INFO 14548 --- [dot-start] [main] o.e.dotstart.scheduling.EasyScheduling   : 系统开始运行时间: 1721811361621 
+2024-07-24T16:56:01.641+08:00  WARN 14548 --- [dot-start] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'myRestTemplate': Injection of resource dependencies failed
+2024-07-24T16:56:01.645+08:00  INFO 14548 --- [dot-start] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-07-24T16:56:01.659+08:00  INFO 14548 --- [dot-start] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-07-24T16:56:01.683+08:00 ERROR 14548 --- [dot-start] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+A component required a bean of type 'org.springframework.web.client.RestTemplate' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.web.client.RestTemplate' in your configuration.
+
+2024-07-24T16:59:14.464+08:00  INFO 25568 --- [dot-start] [main] o.example.dotstart.DotStartApplication   : Starting DotStartApplication using Java 21.0.2 with PID 25568 (F:\SourceCodeMirror\dot\dot-start\target\classes started by wbb in F:\SourceCodeMirror\dot)
+2024-07-24T16:59:14.466+08:00  INFO 25568 --- [dot-start] [main] o.example.dotstart.DotStartApplication   : The following 1 profile is active: "dev"
+2024-07-24T16:59:16.476+08:00  INFO 25568 --- [dot-start] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-07-24T16:59:16.501+08:00  INFO 25568 --- [dot-start] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-24T16:59:16.502+08:00  INFO 25568 --- [dot-start] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-07-24T16:59:16.585+08:00  INFO 25568 --- [dot-start] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-24T16:59:16.585+08:00  INFO 25568 --- [dot-start] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2034 ms
+2024-07-24T16:59:17.028+08:00  INFO 25568 --- [dot-start] [main] o.e.dotstart.scheduling.EasyScheduling   : 系统开始运行时间: 1721811557028 
+2024-07-24T16:59:18.195+08:00  INFO 25568 --- [dot-start] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-07-24T16:59:18.210+08:00  INFO 25568 --- [dot-start] [main] o.example.dotstart.DotStartApplication   : Started DotStartApplication in 4.761 seconds (process running for 6.436)
+2024-07-24T17:00:00.033+08:00  INFO 25568 --- [dot-start] [scheduling-1] o.e.dotstart.scheduling.EasyScheduling   : 系统运行了 0 分钟
+2024-07-24T17:01:00.015+08:00  INFO 25568 --- [dot-start] [scheduling-1] o.e.dotstart.scheduling.EasyScheduling   : 系统运行了 1 分钟
+2024-07-24T17:02:00.095+08:00  INFO 25568 --- [dot-start] [scheduling-1] o.e.dotstart.scheduling.EasyScheduling   : 系统运行了 2 分钟
+2024-07-24T17:03:00.063+08:00  INFO 25568 --- [dot-start] [scheduling-1] o.e.dotstart.scheduling.EasyScheduling   : 系统运行了 3 分钟
+2024-07-24T17:04:00.011+08:00  INFO 25568 --- [dot-start] [scheduling-1] o.e.dotstart.scheduling.EasyScheduling   : 系统运行了 4 分钟
+2024-07-24T17:05:00.011+08:00  INFO 25568 --- [dot-start] [scheduling-1] o.e.dotstart.scheduling.EasyScheduling   : 系统运行了 5 分钟
+2024-07-24T17:06:00.046+08:00  INFO 25568 --- [dot-start] [scheduling-1] o.e.dotstart.scheduling.EasyScheduling   : 系统运行了 6 分钟
+2024-07-24T17:07:00.051+08:00  INFO 25568 --- [dot-start] [scheduling-1] o.e.dotstart.scheduling.EasyScheduling   : 系统运行了 7 分钟
+2024-07-24T17:08:00.058+08:00  INFO 25568 --- [dot-start] [scheduling-1] o.e.dotstart.scheduling.EasyScheduling   : 系统运行了 8 分钟
+2024-07-24T17:08:06.091+08:00  WARN 25568 --- [dot-start] [rebel-change-detector-thread] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[org.example.dotstart.mybatisflex.mapper]' package. Please check your configuration.
+2024-07-24T17:09:00.003+08:00  INFO 25568 --- [dot-start] [scheduling-1] o.e.dotstart.scheduling.EasyScheduling   : 系统运行了 9 分钟
+2024-07-24T17:10:02.006+08:00  INFO 5740 --- [dot-start] [main] o.example.dotstart.DotStartApplication   : Starting DotStartApplication using Java 21.0.2 with PID 5740 (F:\SourceCodeMirror\dot\dot-start\target\classes started by wbb in F:\SourceCodeMirror\dot)
+2024-07-24T17:10:02.007+08:00  INFO 5740 --- [dot-start] [main] o.example.dotstart.DotStartApplication   : The following 1 profile is active: "dev"
+2024-07-24T17:10:03.798+08:00  INFO 5740 --- [dot-start] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-07-24T17:10:03.821+08:00  INFO 5740 --- [dot-start] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-24T17:10:03.822+08:00  INFO 5740 --- [dot-start] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-07-24T17:10:03.898+08:00  INFO 5740 --- [dot-start] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-24T17:10:03.898+08:00  INFO 5740 --- [dot-start] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1826 ms
+2024-07-24T17:10:04.320+08:00  INFO 5740 --- [dot-start] [main] o.e.dotstart.scheduling.EasyScheduling   : 系统开始运行时间: 1721812204320 
+2024-07-24T17:10:05.218+08:00  INFO 5740 --- [dot-start] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-07-24T17:10:05.229+08:00  INFO 5740 --- [dot-start] [main] o.example.dotstart.DotStartApplication   : Started DotStartApplication in 4.202 seconds (process running for 5.76)
+2024-07-24T17:11:00.014+08:00  INFO 5740 --- [dot-start] [scheduling-1] o.e.dotstart.scheduling.EasyScheduling   : 系统运行了 0 分钟
+2024-07-24T17:11:22.983+08:00  INFO 5740 --- [dot-start] [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [Hm_lvt_a1ff8825baa73c3a78eb96aa40325abc=1715326739,1715388579,1716170608,1716471089;] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2024-07-24T17:11:22.998+08:00  INFO 5740 --- [dot-start] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-24T17:11:22.998+08:00  INFO 5740 --- [dot-start] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-07-24T17:11:22.998+08:00  INFO 5740 --- [dot-start] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-07-24T17:11:24.027+08:00  INFO 5740 --- [dot-start] [http-nio-8080-exec-5] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 294 ms
+2024-07-24T17:12:00.012+08:00  INFO 5740 --- [dot-start] [scheduling-1] o.e.dotstart.scheduling.EasyScheduling   : 系统运行了 1 分钟
+2024-07-24T17:13:00.001+08:00  INFO 5740 --- [dot-start] [scheduling-1] o.e.dotstart.scheduling.EasyScheduling   : 系统运行了 2 分钟
+2024-07-24T17:13:27.914+08:00  INFO 18080 --- [dot-start] [main] o.example.dotstart.DotStartApplication   : Starting DotStartApplication using Java 21.0.2 with PID 18080 (F:\SourceCodeMirror\dot\dot-start\target\classes started by wbb in F:\SourceCodeMirror\dot)
+2024-07-24T17:13:27.916+08:00  INFO 18080 --- [dot-start] [main] o.example.dotstart.DotStartApplication   : The following 1 profile is active: "dev"
+2024-07-24T17:13:29.657+08:00  INFO 18080 --- [dot-start] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-07-24T17:13:29.680+08:00  INFO 18080 --- [dot-start] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-24T17:13:29.681+08:00  INFO 18080 --- [dot-start] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-07-24T17:13:29.753+08:00  INFO 18080 --- [dot-start] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-24T17:13:29.753+08:00  INFO 18080 --- [dot-start] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1758 ms
+2024-07-24T17:13:30.171+08:00  INFO 18080 --- [dot-start] [main] o.e.dotstart.scheduling.EasyScheduling   : 系统开始运行时间: 1721812410171 
+2024-07-24T17:13:31.024+08:00  INFO 18080 --- [dot-start] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-07-24T17:13:31.035+08:00  INFO 18080 --- [dot-start] [main] o.example.dotstart.DotStartApplication   : Started DotStartApplication in 4.05 seconds (process running for 5.787)
+2024-07-24T17:14:00.010+08:00  INFO 18080 --- [dot-start] [scheduling-1] o.e.dotstart.scheduling.EasyScheduling   : 系统运行了 0 分钟
+2024-07-24T17:15:00.014+08:00  INFO 18080 --- [dot-start] [scheduling-1] o.e.dotstart.scheduling.EasyScheduling   : 系统运行了 1 分钟
+2024-07-24T17:16:00.010+08:00  INFO 18080 --- [dot-start] [scheduling-1] o.e.dotstart.scheduling.EasyScheduling   : 系统运行了 2 分钟
+2024-07-24T17:17:00.015+08:00  INFO 18080 --- [dot-start] [scheduling-1] o.e.dotstart.scheduling.EasyScheduling   : 系统运行了 3 分钟
+2024-07-24T17:17:51.168+08:00  INFO 20792 --- [dot-start] [main] o.example.dotstart.DotStartApplication   : Starting DotStartApplication using Java 21.0.2 with PID 20792 (F:\SourceCodeMirror\dot\dot-start\target\classes started by wbb in F:\SourceCodeMirror\dot)
+2024-07-24T17:17:51.170+08:00  INFO 20792 --- [dot-start] [main] o.example.dotstart.DotStartApplication   : The following 1 profile is active: "dev"
+2024-07-24T17:17:52.982+08:00  INFO 20792 --- [dot-start] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-07-24T17:17:53.007+08:00  INFO 20792 --- [dot-start] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-24T17:17:53.007+08:00  INFO 20792 --- [dot-start] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-07-24T17:17:53.083+08:00  INFO 20792 --- [dot-start] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-24T17:17:53.084+08:00  INFO 20792 --- [dot-start] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1838 ms
+2024-07-24T17:17:53.491+08:00  INFO 20792 --- [dot-start] [main] o.e.dotstart.scheduling.EasyScheduling   : 系统开始运行时间: 1721812673491 
+2024-07-24T17:17:54.377+08:00  INFO 20792 --- [dot-start] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-07-24T17:17:54.388+08:00  INFO 20792 --- [dot-start] [main] o.example.dotstart.DotStartApplication   : Started DotStartApplication in 4.255 seconds (process running for 6.118)
+2024-07-24T17:18:00.013+08:00  INFO 20792 --- [dot-start] [scheduling-1] o.e.dotstart.scheduling.EasyScheduling   : 系统运行了 0 分钟
+2024-07-24T17:18:00.574+08:00  INFO 20792 --- [dot-start] [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [Hm_lvt_a1ff8825baa73c3a78eb96aa40325abc=1715326739,1715388579,1716170608,1716471089;] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2024-07-24T17:18:00.583+08:00  INFO 20792 --- [dot-start] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-24T17:18:00.583+08:00  INFO 20792 --- [dot-start] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-07-24T17:18:00.584+08:00  INFO 20792 --- [dot-start] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-07-24T17:18:01.485+08:00  INFO 20792 --- [dot-start] [http-nio-8080-exec-3] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 212 ms
+2024-07-24T17:19:00.052+08:00  WARN 20792 --- [dot-start] [scheduling-1] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[org.example.dotstart.mybatisflex.mapper]' package. Please check your configuration.
+2024-07-24T17:19:00.124+08:00  INFO 20792 --- [dot-start] [scheduling-1] o.e.dotstart.scheduling.EasyScheduling   : 系统运行了 1 分钟
+2024-07-24T17:20:00.006+08:00  INFO 20792 --- [dot-start] [scheduling-1] o.e.dotstart.scheduling.EasyScheduling   : 系统运行了 2 分钟
+2024-07-24T17:21:00.004+08:00  INFO 20792 --- [dot-start] [scheduling-1] o.e.dotstart.scheduling.EasyScheduling   : 系统运行了 3 分钟
+2024-07-24T17:22:00.007+08:00  INFO 20792 --- [dot-start] [scheduling-1] o.e.dotstart.scheduling.EasyScheduling   : 系统运行了 4 分钟
+2024-07-24T17:23:00.014+08:00  INFO 20792 --- [dot-start] [scheduling-1] o.e.dotstart.scheduling.EasyScheduling   : 系统运行了 5 分钟
+2024-07-24T17:23:10.782+08:00  INFO 20792 --- [dot-start] [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-24T17:23:11.290+08:00  INFO 20792 --- [dot-start] [http-nio-8080-exec-6] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@45af0dc0
+2024-07-24T17:23:11.296+08:00  INFO 20792 --- [dot-start] [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-24T17:24:00.004+08:00  INFO 20792 --- [dot-start] [scheduling-1] o.e.dotstart.scheduling.EasyScheduling   : 系统运行了 6 分钟
+2024-07-24T17:24:13.750+08:00  INFO 20792 --- [dot-start] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-07-24T17:24:13.758+08:00  INFO 20792 --- [dot-start] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-07-24T17:24:19.466+08:00  INFO 23524 --- [dot-start] [main] o.example.dotstart.DotStartApplication   : Starting DotStartApplication using Java 21.0.2 with PID 23524 (F:\SourceCodeMirror\dot\dot-start\target\classes started by wbb in F:\SourceCodeMirror\dot)
+2024-07-24T17:24:19.468+08:00  INFO 23524 --- [dot-start] [main] o.example.dotstart.DotStartApplication   : The following 1 profile is active: "dev"
+2024-07-24T17:24:21.192+08:00  INFO 23524 --- [dot-start] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-07-24T17:24:21.216+08:00  INFO 23524 --- [dot-start] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-24T17:24:21.216+08:00  INFO 23524 --- [dot-start] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-07-24T17:24:21.295+08:00  INFO 23524 --- [dot-start] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-24T17:24:21.296+08:00  INFO 23524 --- [dot-start] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1762 ms
+2024-07-24T17:24:21.721+08:00  INFO 23524 --- [dot-start] [main] o.e.dotstart.scheduling.EasyScheduling   : 系统开始运行时间: 1721813061721 
+2024-07-24T17:24:22.604+08:00  INFO 23524 --- [dot-start] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-07-24T17:24:22.616+08:00  INFO 23524 --- [dot-start] [main] o.example.dotstart.DotStartApplication   : Started DotStartApplication in 4.104 seconds (process running for 5.946)
+2024-07-24T17:25:00.009+08:00  INFO 23524 --- [dot-start] [scheduling-1] o.e.dotstart.scheduling.EasyScheduling   : 系统运行了 0 分钟
+2024-07-24T17:25:29.662+08:00  INFO 23524 --- [dot-start] [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [Hm_lvt_a1ff8825baa73c3a78eb96aa40325abc=1715326739,1715388579,1716170608,1716471089;] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2024-07-24T17:25:29.670+08:00  INFO 23524 --- [dot-start] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-24T17:25:29.671+08:00  INFO 23524 --- [dot-start] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-07-24T17:25:29.672+08:00  INFO 23524 --- [dot-start] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-07-24T17:25:30.559+08:00  INFO 23524 --- [dot-start] [http-nio-8080-exec-10] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 213 ms
+2024-07-24T17:26:00.004+08:00  INFO 23524 --- [dot-start] [scheduling-1] o.e.dotstart.scheduling.EasyScheduling   : 系统运行了 1 分钟
+2024-07-24T17:27:00.003+08:00  INFO 23524 --- [dot-start] [scheduling-1] o.e.dotstart.scheduling.EasyScheduling   : 系统运行了 2 分钟
+2024-07-24T17:27:21.461+08:00  INFO 23524 --- [dot-start] [http-nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-24T17:27:21.675+08:00  INFO 23524 --- [dot-start] [http-nio-8080-exec-4] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@782ea745
+2024-07-24T17:27:21.675+08:00  INFO 23524 --- [dot-start] [http-nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-24T17:27:35.233+08:00 ERROR 23524 --- [dot-start] [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.DuplicateKeyException: 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '0' for key 'tb_account.PRIMARY'
+### The error may exist in org/example/dotstart/mybatisflex/mapper/AccountMapper.java (best guess)
+### The error may involve org.example.dotstart.mybatisflex.mapper.AccountMapper.insert
+### The error occurred while executing an update
+### SQL: INSERT INTO `tb_account`(`id`, `user_name`, `age`, `deleted`) VALUES (?, ?, ?, ?)
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '0' for key 'tb_account.PRIMARY'
+; Duplicate entry '0' for key 'tb_account.PRIMARY'] with root cause
+
+java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '0' for key 'tb_account.PRIMARY'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:118)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:912)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:354)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:48)
+	at com.mybatisflex.core.mybatis.FlexStatementHandler.update(FlexStatementHandler.java:95)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425)
+	at jdk.proxy2/jdk.proxy2.$Proxy101.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:272)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy2/jdk.proxy2.$Proxy104.insert(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.mybatisflex.core.mybatis.MapperInvocationHandler.invoke(MapperInvocationHandler.java:103)
+	at jdk.proxy2/jdk.proxy2.$Proxy104.insert(Unknown Source)
+	at com.mybatisflex.core.service.IService.save(IService.java:65)
+	at org.example.dotstart.mybatisflex.controller.AccountController.save(AccountController.java:47)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:925)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:830)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.__invoke(StandardContextValve.java:90)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:41002)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2024-07-24T17:27:42.108+08:00 ERROR 23524 --- [dot-start] [http-nio-8080-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: java.sql.SQLException: Field 'id' doesn't have a default value
+### The error may exist in org/example/dotstart/mybatisflex/mapper/AccountMapper.java (best guess)
+### The error may involve org.example.dotstart.mybatisflex.mapper.AccountMapper.insert
+### The error occurred while executing an update
+### SQL: INSERT INTO `tb_account`(`user_name`, `age`, `deleted`) VALUES (?, ?, ?)
+### Cause: java.sql.SQLException: Field 'id' doesn't have a default value
+; Field 'id' doesn't have a default value] with root cause
+
+java.sql.SQLException: Field 'id' doesn't have a default value
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:912)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:354)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:48)
+	at com.mybatisflex.core.mybatis.FlexStatementHandler.update(FlexStatementHandler.java:95)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425)
+	at jdk.proxy2/jdk.proxy2.$Proxy101.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:272)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy2/jdk.proxy2.$Proxy104.insert(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.mybatisflex.core.mybatis.MapperInvocationHandler.invoke(MapperInvocationHandler.java:103)
+	at jdk.proxy2/jdk.proxy2.$Proxy104.insert(Unknown Source)
+	at com.mybatisflex.core.service.IService.save(IService.java:65)
+	at org.example.dotstart.mybatisflex.controller.AccountController.save(AccountController.java:47)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:925)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:830)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.__invoke(StandardContextValve.java:90)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:41002)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2024-07-24T17:27:44.405+08:00 ERROR 23524 --- [dot-start] [http-nio-8080-exec-10] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: java.sql.SQLException: Field 'id' doesn't have a default value
+### The error may exist in org/example/dotstart/mybatisflex/mapper/AccountMapper.java (best guess)
+### The error may involve org.example.dotstart.mybatisflex.mapper.AccountMapper.insert
+### The error occurred while executing an update
+### SQL: INSERT INTO `tb_account`(`user_name`, `age`, `deleted`) VALUES (?, ?, ?)
+### Cause: java.sql.SQLException: Field 'id' doesn't have a default value
+; Field 'id' doesn't have a default value] with root cause
+
+java.sql.SQLException: Field 'id' doesn't have a default value
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:912)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:354)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:48)
+	at com.mybatisflex.core.mybatis.FlexStatementHandler.update(FlexStatementHandler.java:95)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425)
+	at jdk.proxy2/jdk.proxy2.$Proxy101.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:272)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy2/jdk.proxy2.$Proxy104.insert(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.mybatisflex.core.mybatis.MapperInvocationHandler.invoke(MapperInvocationHandler.java:103)
+	at jdk.proxy2/jdk.proxy2.$Proxy104.insert(Unknown Source)
+	at com.mybatisflex.core.service.IService.save(IService.java:65)
+	at org.example.dotstart.mybatisflex.controller.AccountController.save(AccountController.java:47)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:925)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:830)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.__invoke(StandardContextValve.java:90)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:41002)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2024-07-24T17:28:00.009+08:00  INFO 23524 --- [dot-start] [scheduling-1] o.e.dotstart.scheduling.EasyScheduling   : 系统运行了 3 分钟
+2024-07-24T17:28:09.026+08:00 ERROR 23524 --- [dot-start] [http-nio-8080-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: java.sql.SQLException: Field 'id' doesn't have a default value
+### The error may exist in org/example/dotstart/mybatisflex/mapper/AccountMapper.java (best guess)
+### The error may involve org.example.dotstart.mybatisflex.mapper.AccountMapper.insert
+### The error occurred while executing an update
+### SQL: INSERT INTO `tb_account`(`user_name`, `age`, `deleted`) VALUES (?, ?, ?)
+### Cause: java.sql.SQLException: Field 'id' doesn't have a default value
+; Field 'id' doesn't have a default value] with root cause
+
+java.sql.SQLException: Field 'id' doesn't have a default value
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:912)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:354)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:48)
+	at com.mybatisflex.core.mybatis.FlexStatementHandler.update(FlexStatementHandler.java:95)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425)
+	at jdk.proxy2/jdk.proxy2.$Proxy101.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:272)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy2/jdk.proxy2.$Proxy104.insert(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.mybatisflex.core.mybatis.MapperInvocationHandler.invoke(MapperInvocationHandler.java:103)
+	at jdk.proxy2/jdk.proxy2.$Proxy104.insert(Unknown Source)
+	at com.mybatisflex.core.service.IService.save(IService.java:65)
+	at org.example.dotstart.mybatisflex.controller.AccountController.save(AccountController.java:47)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:925)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:830)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.__invoke(StandardContextValve.java:90)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:41002)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2024-07-24T17:28:10.641+08:00  WARN 23524 --- [dot-start] [http-nio-8080-exec-6] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[org.example.dotstart.mybatisflex.mapper]' package. Please check your configuration.
+2024-07-24T17:28:10.673+08:00 ERROR 23524 --- [dot-start] [http-nio-8080-exec-6] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: java.sql.SQLException: Field 'id' doesn't have a default value
+### The error may exist in org/example/dotstart/mybatisflex/mapper/AccountMapper.java (best guess)
+### The error may involve org.example.dotstart.mybatisflex.mapper.AccountMapper.insert
+### The error occurred while executing an update
+### SQL: INSERT INTO `tb_account`(`user_name`, `age`, `deleted`) VALUES (?, ?, ?)
+### Cause: java.sql.SQLException: Field 'id' doesn't have a default value
+; Field 'id' doesn't have a default value] with root cause
+
+java.sql.SQLException: Field 'id' doesn't have a default value
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:912)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:354)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:48)
+	at com.mybatisflex.core.mybatis.FlexStatementHandler.update(FlexStatementHandler.java:95)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425)
+	at jdk.proxy2/jdk.proxy2.$Proxy101.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:272)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy2/jdk.proxy2.$Proxy104.insert(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.mybatisflex.core.mybatis.MapperInvocationHandler.invoke(MapperInvocationHandler.java:103)
+	at jdk.proxy2/jdk.proxy2.$Proxy104.insert(Unknown Source)
+	at com.mybatisflex.core.service.IService.save(IService.java:65)
+	at org.example.dotstart.mybatisflex.controller.AccountController.save(AccountController.java:47)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:925)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:830)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.__invoke(StandardContextValve.java:90)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:41002)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2024-07-24T17:28:25.015+08:00  INFO 23524 --- [dot-start] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-07-24T17:28:25.023+08:00  INFO 23524 --- [dot-start] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-07-24T17:28:28.119+08:00  INFO 24620 --- [dot-start] [main] o.example.dotstart.DotStartApplication   : Starting DotStartApplication using Java 21.0.2 with PID 24620 (F:\SourceCodeMirror\dot\dot-start\target\classes started by wbb in F:\SourceCodeMirror\dot)
+2024-07-24T17:28:28.122+08:00  INFO 24620 --- [dot-start] [main] o.example.dotstart.DotStartApplication   : The following 1 profile is active: "dev"
+2024-07-24T17:28:29.968+08:00  INFO 24620 --- [dot-start] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-07-24T17:28:29.992+08:00  INFO 24620 --- [dot-start] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-24T17:28:29.992+08:00  INFO 24620 --- [dot-start] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-07-24T17:28:30.059+08:00  INFO 24620 --- [dot-start] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-24T17:28:30.059+08:00  INFO 24620 --- [dot-start] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1855 ms
+2024-07-24T17:28:30.464+08:00  INFO 24620 --- [dot-start] [main] o.e.dotstart.scheduling.EasyScheduling   : 系统开始运行时间: 1721813310464 
+2024-07-24T17:28:31.290+08:00  INFO 24620 --- [dot-start] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-07-24T17:28:31.301+08:00  INFO 24620 --- [dot-start] [main] o.example.dotstart.DotStartApplication   : Started DotStartApplication in 4.041 seconds (process running for 5.622)
+2024-07-24T17:28:45.679+08:00  INFO 24620 --- [dot-start] [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [Hm_lvt_a1ff8825baa73c3a78eb96aa40325abc=1715326739,1715388579,1716170608,1716471089;] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2024-07-24T17:28:45.690+08:00  INFO 24620 --- [dot-start] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-24T17:28:45.690+08:00  INFO 24620 --- [dot-start] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-07-24T17:28:45.691+08:00  INFO 24620 --- [dot-start] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-07-24T17:28:45.864+08:00  INFO 24620 --- [dot-start] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-24T17:28:46.061+08:00  INFO 24620 --- [dot-start] [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@586b8305
+2024-07-24T17:28:46.064+08:00  INFO 24620 --- [dot-start] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-24T17:29:00.009+08:00  INFO 24620 --- [dot-start] [scheduling-1] o.e.dotstart.scheduling.EasyScheduling   : 系统运行了 0 分钟
+2024-07-24T17:30:00.001+08:00  INFO 24620 --- [dot-start] [scheduling-1] o.e.dotstart.scheduling.EasyScheduling   : 系统运行了 1 分钟
+2024-07-24T17:30:13.413+08:00  INFO 24620 --- [dot-start] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-07-24T17:30:13.421+08:00  INFO 24620 --- [dot-start] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-07-24T17:30:17.262+08:00  INFO 25476 --- [dot-start] [main] o.example.dotstart.DotStartApplication   : Starting DotStartApplication using Java 21.0.2 with PID 25476 (F:\SourceCodeMirror\dot\dot-start\target\classes started by wbb in F:\SourceCodeMirror\dot)
+2024-07-24T17:30:17.264+08:00  INFO 25476 --- [dot-start] [main] o.example.dotstart.DotStartApplication   : The following 1 profile is active: "dev"
+2024-07-24T17:30:19.352+08:00  INFO 25476 --- [dot-start] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-07-24T17:30:19.384+08:00  INFO 25476 --- [dot-start] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-24T17:30:19.385+08:00  INFO 25476 --- [dot-start] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-07-24T17:30:19.483+08:00  INFO 25476 --- [dot-start] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-24T17:30:19.484+08:00  INFO 25476 --- [dot-start] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2132 ms
+2024-07-24T17:30:19.949+08:00  INFO 25476 --- [dot-start] [main] o.e.dotstart.scheduling.EasyScheduling   : 系统开始运行时间: 1721813419949 
+2024-07-24T17:30:21.169+08:00  INFO 25476 --- [dot-start] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-07-24T17:30:21.183+08:00  INFO 25476 --- [dot-start] [main] o.example.dotstart.DotStartApplication   : Started DotStartApplication in 5.06 seconds (process running for 7.027)
+2024-07-24T17:30:22.827+08:00  INFO 25476 --- [dot-start] [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [Hm_lvt_a1ff8825baa73c3a78eb96aa40325abc=1715326739,1715388579,1716170608,1716471089;] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2024-07-24T17:30:22.838+08:00  INFO 25476 --- [dot-start] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-24T17:30:22.838+08:00  INFO 25476 --- [dot-start] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-07-24T17:30:22.839+08:00  INFO 25476 --- [dot-start] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-07-24T17:30:22.988+08:00  INFO 25476 --- [dot-start] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-24T17:30:23.194+08:00  INFO 25476 --- [dot-start] [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@21054b56
+2024-07-24T17:30:23.197+08:00  INFO 25476 --- [dot-start] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-24T17:31:00.022+08:00  INFO 25476 --- [dot-start] [scheduling-1] o.e.dotstart.scheduling.EasyScheduling   : 系统运行了 0 分钟
+2024-07-24T17:32:00.007+08:00  INFO 25476 --- [dot-start] [scheduling-1] o.e.dotstart.scheduling.EasyScheduling   : 系统运行了 1 分钟
+2024-07-24T17:33:00.003+08:00  INFO 25476 --- [dot-start] [scheduling-1] o.e.dotstart.scheduling.EasyScheduling   : 系统运行了 2 分钟
+2024-07-24T17:34:00.010+08:00  INFO 25476 --- [dot-start] [scheduling-1] o.e.dotstart.scheduling.EasyScheduling   : 系统运行了 3 分钟
+2024-07-24T17:35:00.008+08:00  WARN 25476 --- [dot-start] [scheduling-1] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[org.example.dotstart.mybatisflex.mapper]' package. Please check your configuration.
+2024-07-24T17:35:00.050+08:00  INFO 25476 --- [dot-start] [scheduling-1] o.e.dotstart.scheduling.EasyScheduling   : 系统运行了 4 分钟
+2024-07-24T17:36:00.001+08:00  INFO 25476 --- [dot-start] [scheduling-1] o.e.dotstart.scheduling.EasyScheduling   : 系统运行了 5 分钟
+2024-07-24T17:37:00.002+08:00  INFO 25476 --- [dot-start] [scheduling-1] o.e.dotstart.scheduling.EasyScheduling   : 系统运行了 6 分钟
+2024-07-24T17:38:02.079+08:00  INFO 25476 --- [dot-start] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-07-24T17:38:02.087+08:00  INFO 25476 --- [dot-start] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-07-24T17:38:07.931+08:00  INFO 24252 --- [dot-start] [main] o.example.dotstart.DotStartApplication   : Starting DotStartApplication using Java 21.0.2 with PID 24252 (F:\SourceCodeMirror\dot\dot-start\target\classes started by wbb in F:\SourceCodeMirror\dot)
+2024-07-24T17:38:07.932+08:00  INFO 24252 --- [dot-start] [main] o.example.dotstart.DotStartApplication   : The following 1 profile is active: "dev"
+2024-07-24T17:38:09.654+08:00  INFO 24252 --- [dot-start] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-07-24T17:38:09.678+08:00  INFO 24252 --- [dot-start] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-24T17:38:09.678+08:00  INFO 24252 --- [dot-start] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-07-24T17:38:09.750+08:00  INFO 24252 --- [dot-start] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-24T17:38:09.750+08:00  INFO 24252 --- [dot-start] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1749 ms
+2024-07-24T17:38:10.173+08:00  INFO 24252 --- [dot-start] [main] o.e.dotstart.scheduling.EasyScheduling   : 系统开始运行时间: 1721813890173 
+2024-07-24T17:38:11.007+08:00  INFO 24252 --- [dot-start] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-07-24T17:38:11.018+08:00  INFO 24252 --- [dot-start] [main] o.example.dotstart.DotStartApplication   : Started DotStartApplication in 4.009 seconds (process running for 5.857)
+2024-07-24T17:38:50.980+08:00  INFO 24252 --- [dot-start] [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [Hm_lvt_a1ff8825baa73c3a78eb96aa40325abc=1715326739,1715388579,1716170608,1716471089;] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2024-07-24T17:38:50.991+08:00  INFO 24252 --- [dot-start] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-24T17:38:50.991+08:00  INFO 24252 --- [dot-start] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-07-24T17:38:50.992+08:00  INFO 24252 --- [dot-start] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-07-24T17:38:51.125+08:00 ERROR 24252 --- [dot-start] [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.mybatis.spring.MyBatisSystemException] with root cause
+
+java.lang.NumberFormatException: For input string: "ee9b6b1a78834e0698465b137964c6c3"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:662)
+	at java.base/java.lang.Integer.parseInt(Integer.java:778)
+	at com.mybatisflex.core.util.ConvertUtil.convert(ConvertUtil.java:58)
+	at com.mybatisflex.core.util.ConvertUtil.convert(ConvertUtil.java:34)
+	at com.mybatisflex.core.keygen.CustomKeyGenerator.processBefore(CustomKeyGenerator.java:84)
+	at org.apache.ibatis.executor.statement.BaseStatementHandler.generateKeys(BaseStatementHandler.java:143)
+	at org.apache.ibatis.executor.statement.BaseStatementHandler.<init>(BaseStatementHandler.java:64)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.<init>(PreparedStatementHandler.java:42)
+	at com.mybatisflex.core.mybatis.FlexPreparedStatementHandler.<init>(FlexPreparedStatementHandler.java:38)
+	at com.mybatisflex.core.mybatis.FlexStatementHandler.<init>(FlexStatementHandler.java:58)
+	at com.mybatisflex.core.mybatis.FlexConfiguration.newStatementHandler(FlexConfiguration.java:110)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:48)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425)
+	at jdk.proxy2/jdk.proxy2.$Proxy101.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:272)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy2/jdk.proxy2.$Proxy104.insert(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.mybatisflex.core.mybatis.MapperInvocationHandler.invoke(MapperInvocationHandler.java:103)
+	at jdk.proxy2/jdk.proxy2.$Proxy104.insert(Unknown Source)
+	at com.mybatisflex.core.service.IService.save(IService.java:65)
+	at org.example.dotstart.mybatisflex.controller.AccountController.save(AccountController.java:47)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:925)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:830)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.__invoke(StandardContextValve.java:90)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:41002)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2024-07-24T17:39:00.016+08:00  INFO 24252 --- [dot-start] [scheduling-1] o.e.dotstart.scheduling.EasyScheduling   : 系统运行了 0 分钟
+2024-07-24T17:39:52.157+08:00  WARN 24252 --- [dot-start] [http-nio-8080-exec-2] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[org.example.dotstart.mybatisflex.mapper]' package. Please check your configuration.
+2024-07-24T17:39:52.214+08:00 ERROR 24252 --- [dot-start] [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.mybatis.spring.MyBatisSystemException] with root cause
+
+java.lang.NumberFormatException: For input string: "0559785e9d4f43488a4336bf4acee4d8"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:662)
+	at java.base/java.lang.Integer.parseInt(Integer.java:778)
+	at com.mybatisflex.core.util.ConvertUtil.convert(ConvertUtil.java:58)
+	at com.mybatisflex.core.util.ConvertUtil.convert(ConvertUtil.java:34)
+	at com.mybatisflex.core.keygen.CustomKeyGenerator.processBefore(CustomKeyGenerator.java:84)
+	at org.apache.ibatis.executor.statement.BaseStatementHandler.generateKeys(BaseStatementHandler.java:143)
+	at org.apache.ibatis.executor.statement.BaseStatementHandler.<init>(BaseStatementHandler.java:64)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.<init>(PreparedStatementHandler.java:42)
+	at com.mybatisflex.core.mybatis.FlexPreparedStatementHandler.<init>(FlexPreparedStatementHandler.java:38)
+	at com.mybatisflex.core.mybatis.FlexStatementHandler.<init>(FlexStatementHandler.java:58)
+	at com.mybatisflex.core.mybatis.FlexConfiguration.newStatementHandler(FlexConfiguration.java:110)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:48)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425)
+	at jdk.proxy2/jdk.proxy2.$Proxy101.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:272)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy2/jdk.proxy2.$Proxy104.insert(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.mybatisflex.core.mybatis.MapperInvocationHandler.invoke(MapperInvocationHandler.java:103)
+	at jdk.proxy2/jdk.proxy2.$Proxy104.insert(Unknown Source)
+	at com.mybatisflex.core.service.IService.save(IService.java:65)
+	at org.example.dotstart.mybatisflex.controller.AccountController.save(AccountController.java:47)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:925)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:830)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.__invoke(StandardContextValve.java:90)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:41002)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2024-07-24T17:40:10.431+08:00  INFO 22724 --- [dot-start] [main] o.example.dotstart.DotStartApplication   : Starting DotStartApplication using Java 21.0.2 with PID 22724 (F:\SourceCodeMirror\dot\dot-start\target\classes started by wbb in F:\SourceCodeMirror\dot)
+2024-07-24T17:40:10.433+08:00  INFO 22724 --- [dot-start] [main] o.example.dotstart.DotStartApplication   : The following 1 profile is active: "dev"
+2024-07-24T17:40:12.268+08:00  INFO 22724 --- [dot-start] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-07-24T17:40:12.290+08:00  INFO 22724 --- [dot-start] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-24T17:40:12.290+08:00  INFO 22724 --- [dot-start] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-07-24T17:40:12.361+08:00  INFO 22724 --- [dot-start] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-24T17:40:12.361+08:00  INFO 22724 --- [dot-start] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1854 ms
+2024-07-24T17:40:12.773+08:00  INFO 22724 --- [dot-start] [main] o.e.dotstart.scheduling.EasyScheduling   : 系统开始运行时间: 1721814012773 
+2024-07-24T17:40:13.638+08:00  INFO 22724 --- [dot-start] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-07-24T17:40:13.649+08:00  INFO 22724 --- [dot-start] [main] o.example.dotstart.DotStartApplication   : Started DotStartApplication in 4.178 seconds (process running for 5.697)
+2024-07-24T17:40:22.590+08:00  INFO 22724 --- [dot-start] [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [Hm_lvt_a1ff8825baa73c3a78eb96aa40325abc=1715326739,1715388579,1716170608,1716471089;] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2024-07-24T17:40:22.599+08:00  INFO 22724 --- [dot-start] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-24T17:40:22.600+08:00  INFO 22724 --- [dot-start] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-07-24T17:40:22.601+08:00  INFO 22724 --- [dot-start] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-07-24T17:40:22.753+08:00  INFO 22724 --- [dot-start] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-24T17:40:22.940+08:00  INFO 22724 --- [dot-start] [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@424f8b78
+2024-07-24T17:40:22.942+08:00  INFO 22724 --- [dot-start] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-24T17:41:00.016+08:00  INFO 22724 --- [dot-start] [scheduling-1] o.e.dotstart.scheduling.EasyScheduling   : 系统运行了 0 分钟
+2024-07-24T17:42:00.012+08:00  INFO 22724 --- [dot-start] [scheduling-1] o.e.dotstart.scheduling.EasyScheduling   : 系统运行了 1 分钟
+2024-07-24T17:43:00.006+08:00  INFO 22724 --- [dot-start] [scheduling-1] o.e.dotstart.scheduling.EasyScheduling   : 系统运行了 2 分钟
+2024-07-24T17:44:00.011+08:00  INFO 22724 --- [dot-start] [scheduling-1] o.e.dotstart.scheduling.EasyScheduling   : 系统运行了 3 分钟
+2024-07-24T17:45:00.002+08:00  INFO 22724 --- [dot-start] [scheduling-1] o.e.dotstart.scheduling.EasyScheduling   : 系统运行了 4 分钟
+2024-07-24T17:46:00.002+08:00  INFO 22724 --- [dot-start] [scheduling-1] o.e.dotstart.scheduling.EasyScheduling   : 系统运行了 5 分钟
+2024-07-24T17:47:00.001+08:00  INFO 22724 --- [dot-start] [scheduling-1] o.e.dotstart.scheduling.EasyScheduling   : 系统运行了 6 分钟
+2024-07-24T17:48:07.790+08:00  INFO 22724 --- [dot-start] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-07-24T17:48:07.797+08:00  INFO 22724 --- [dot-start] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-07-24T17:48:11.305+08:00  INFO 1196 --- [dot-start] [main] o.example.dotstart.DotStartApplication   : Starting DotStartApplication using Java 21.0.2 with PID 1196 (F:\SourceCodeMirror\dot\dot-start\target\classes started by wbb in F:\SourceCodeMirror\dot)
+2024-07-24T17:48:11.307+08:00  INFO 1196 --- [dot-start] [main] o.example.dotstart.DotStartApplication   : The following 1 profile is active: "dev"
+2024-07-24T17:48:11.894+08:00  WARN 1196 --- [dot-start] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.parsing.BeanDefinitionParsingException: Configuration problem: @Bean method 'registerKeyGenerator' must not be declared as void; change the method's return type or its annotation.
+Offending resource: class path resource [org/example/dotstart/mybatisflex/config/MybatisFlexConfig.class]
+2024-07-24T17:48:11.905+08:00  INFO 1196 --- [dot-start] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-07-24T17:48:11.926+08:00 ERROR 1196 --- [dot-start] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.parsing.BeanDefinitionParsingException: Configuration problem: @Bean method 'registerKeyGenerator' must not be declared as void; change the method's return type or its annotation.
+Offending resource: class path resource [org/example/dotstart/mybatisflex/config/MybatisFlexConfig.class]
+	at org.springframework.beans.factory.parsing.FailFastProblemReporter.error(FailFastProblemReporter.java:72)
+	at org.springframework.context.annotation.BeanMethod.validate(BeanMethod.java:47)
+	at org.springframework.context.annotation.ConfigurationClass.validate(ConfigurationClass.java:219)
+	at org.springframework.context.annotation.ConfigurationClassParser.validate(ConfigurationClassParser.java:206)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:417)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:289)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:788)
+	at org.springframework.context.support.AbstractApplicationContext.__refresh(AbstractApplicationContext.java:606)
+	at org.springframework.context.support.AbstractApplicationContext.jrLockAndRefresh(AbstractApplicationContext.java:41002)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:42008)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.example.dotstart.DotStartApplication.main(DotStartApplication.java:17)
+
