@@ -1,13 +1,14 @@
 package org.example.dotstart.mybatisflex.service;
 
-import com.mybatisflex.core.service.IService;
+
 import org.example.dotstart.mybatisflex.entity.AccountEntity;
+import com.mybatisflex.core.service.IService;
 
 /**
- *  服务层。
+ * 访问 服务层。
  *
  * @author wbb
- * @since 2024-07-24
+ * @since 0.0.1
  */
 public interface AccountService extends IService<AccountEntity> {
 

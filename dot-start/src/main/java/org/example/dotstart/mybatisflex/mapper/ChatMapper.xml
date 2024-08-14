@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.dotstart.mybatisflex.mapper.ChatMapper">
+    <resultMap id="BaseResultMap" type="org.example.dotstart.mybatisflex.entity.ChatEntity">
+        <id column="chat_id" jdbcType="BIGINT" property="chatId"/>
+        <result column="user_id" jdbcType="BIGINT" property="userId"/>
+        <result column="target_id" jdbcType="BIGINT" property="targetId"/>
+        <result column="content" jdbcType="CLOB" property="content"/>
+        <result column="type" jdbcType="VARCHAR" property="type"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="creator" jdbcType="VARCHAR" property="creator"/>
+        <result column="updater" jdbcType="VARCHAR" property="updater"/>
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+        <result column="target_type" jdbcType="VARCHAR" property="targetType"/>
+        <result column="user_name" jdbcType="VARCHAR" property="userName"/>
+        <result column="send_user_name" jdbcType="VARCHAR" property="sendUserName"/>
+        <result column="status" jdbcType="VARCHAR" property="status"/>
+        <result column="deleted" jdbcType="BIT" property="deleted"/>
+        <result column="title" jdbcType="VARCHAR" property="title"/>
+        <result column="img" jdbcType="VARCHAR" property="img"/>
+        <result column="collection_id" jdbcType="BIGINT" property="collectionId"/>
+        <result column="route_name" jdbcType="VARCHAR" property="routeName"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        `chat_id`, `user_id`, `target_id`, `content`, `type`, `create_time`, `creator`, `updater`, `update_time`, `target_type`, `user_name`, `send_user_name`, `status`, `deleted`, `title`, `img`, `collection_id`, `route_name`
+    </sql>
+
+</mapper>

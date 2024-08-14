@@ -1,109 +1,115 @@
 package org.example.dotstart.mybatisflex.controller;
 
-import com.github.xiaoymin.knife4j.annotations.ApiOperationSupport;
 import com.mybatisflex.core.paginate.Page;
-import org.springframework.core.annotation.Order;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.example.dotstart.mybatisflex.entity.AccountEntity;
-import org.example.dotstart.mybatisflex.service.AccountService;
-import org.springframework.web.bind.annotation.RestController;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.Parameters;
+import io.swagger.v3.oas.annotations.tags.Tag;
+import org.example.dotstart.mybatisflex.entity.AccountEntity;
+import org.example.dotstart.mybatisflex.service.AccountService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
 import java.io.Serializable;
 import java.util.List;
 
 /**
- *  控制层。
+ * 访问 控制层。
  *
  * @author wbb
- * @since 2024-07-24
+ * @since 0.0.1
  */
 @RestController
-@Tag(name = "接口")
-@RequestMapping("/accountEntity")
+@RequestMapping("/account")
+@Tag(name = "访问控制层")
 public class AccountController {
 
     @Autowired
     private AccountService accountService;
 
     /**
-     * 添加。
+     * 添加 访问
      *
-     * @param accountEntity 
+     * @param account 访问
      * @return {@code true} 添加成功，{@code false} 添加失败
      */
-    @ApiOperationSupport(order = 1)
-    @PostMapping("save")
-    @Operation(summary="保存")
-    public boolean save(@RequestBody @Parameter(description="")AccountEntity accountEntity) {
-        return accountService.save(accountEntity);
+    @PostMapping("/save")
+    @Operation(summary = "添加访问")
+    public boolean save(@RequestBody AccountEntity account) {
+        return accountService.save(account);
     }
 
+
     /**
-     * 根据主键删除。
+     * 根据主键删除访问
      *
      * @param id 主键
      * @return {@code true} 删除成功，{@code false} 删除失败
      */
-    @DeleteMapping("remove/{id}")
-    @Operation(summary="根据主键")
-    public boolean remove(@PathVariable @Parameter(description="主键")Serializable id) {
+    @DeleteMapping("/remove/{id}")
+    @Operation(summary = "根据主键删除访问")
+    @Parameters(value = {
+            @Parameter(name = "id", description = "id", required = true)
+    })
+    public boolean remove(@PathVariable Serializable id) {
         return accountService.removeById(id);
     }
 
-    /**
-     * 根据主键更新。
-     *
-     * @param accountEntity 
-     * @return {@code true} 更新成功，{@code false} 更新失败
-     */
-    @PutMapping("update")
-    @Operation(summary="根据主键更新")
-    public boolean update(@RequestBody @Parameter(description="主键")AccountEntity accountEntity) {
-        return accountService.updateById(accountEntity);
-    }
 
     /**
-     * 查询所有。
+     * 根据主键更新访问
+     *
+     * @param account 访问
+     * @return {@code true} 更新成功，{@code false} 更新失败
+     */
+    @PutMapping("/update")
+    @Operation(summary = "根据主键更新访问")
+    public boolean update(@RequestBody AccountEntity account) {
+        return accountService.updateById(account);
+    }
+
+
+    /**
+     * 查询所有访问
      *
      * @return 所有数据
      */
-    @GetMapping("list")
-    @Operation(summary="查询所有")
+    @GetMapping("/list")
+    @Operation(summary = "查询所有访问")
     public List<AccountEntity> list() {
         return accountService.list();
     }
 
+
     /**
-     * 根据主键获取详细信息。
+     * 根据访问主键获取详细信息。
      *
-     * @param id 主键
-     * @return 详情
+     * @param id account主键
+     * @return 访问详情
      */
-    @GetMapping("getInfo/{id}")
-    @Operation(summary="根据主键获取")
-    public AccountEntity getInfo(@PathVariable Serializable id) {
+    @GetMapping("/getInfo/{id}")
+    @Operation(summary = "根据访问主键获取详细信息")
+    @Parameters(value = {
+            @Parameter(name = "id", description = "id", required = true)
+    })
+    public AccountEntity getInfo(@PathVariable("id") Serializable id) {
         return accountService.getById(id);
     }
 
+
     /**
-     * 分页查询。
+     * 分页查询访问
      *
      * @param page 分页对象
      * @return 分页对象
      */
-    @GetMapping("page")
-    @Operation(description="分页查询")
-    public Page<AccountEntity> page(@Parameter(description="分页信息")Page<AccountEntity> page) {
+    @GetMapping("/page")
+    @Operation(summary = "分页查询访问")
+    @Parameters(value = {
+            @Parameter(name = "pageNumber", description = "页码", required = true),
+            @Parameter(name = "pageSize", description = "每页大小", required = true)
+    })
+    public Page<AccountEntity> page(Page<AccountEntity> page) {
         return accountService.page(page);
     }
-
 }

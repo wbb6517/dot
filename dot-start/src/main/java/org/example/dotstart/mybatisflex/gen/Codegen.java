@@ -7,13 +7,14 @@ import com.mybatisflex.codegen.config.EntityConfig;
 import com.mybatisflex.codegen.config.GlobalConfig;
 import com.mybatisflex.core.keygen.KeyGenerators;
 import com.zaxxer.hikari.HikariDataSource;
+import org.apache.ibatis.type.JdbcType;
 
 public class Codegen {
 
     public static void main(String[] args) {
         //配置数据源
         HikariDataSource dataSource = new HikariDataSource();
-        dataSource.setJdbcUrl("jdbc:mysql://127.0.0.1:3307/flex_test?useInformationSchema=true&characterEncoding=utf-8");
+        dataSource.setJdbcUrl("jdbc:mysql://127.0.0.1:3306/flex_test?useInformationSchema=true&characterEncoding=utf-8");
         dataSource.setUsername("root");
         dataSource.setPassword("123456");
 
@@ -33,8 +34,7 @@ public class Codegen {
         GlobalConfig globalConfig = new GlobalConfig();
 
         // 设置表前缀和只生成哪些表
-        globalConfig.setTablePrefix("tb_");
-        globalConfig.setGenerateTable("tb_account");
+        globalConfig.setGenerateTable("tb_account","b_banner");
 
         // 生成文件
         globalConfig.enableEntity();
@@ -43,7 +43,7 @@ public class Codegen {
         globalConfig.enableServiceImpl();
         globalConfig.enableController();
         globalConfig.enableMapperXml();
-//        globalConfig.enableTableDef();
+        globalConfig.enableTableDef();
 //        globalConfig.enablePackageInfo();
 
         // 注释配置
@@ -52,7 +52,7 @@ public class Codegen {
 
         // 包配置
         globalConfig.getPackageConfig()
-                .setSourceDir("F:\\SourceCodeMirror\\dot\\dot-start\\src\\main\\java")
+                .setSourceDir("E:\\IdeaProjects\\dot\\dot-start\\src\\main\\java")
                 .setBasePackage("org.example.dotstart.mybatisflex");
 
         // 主键策略配置
@@ -61,12 +61,13 @@ public class Codegen {
         idColumnConfig.setPrimaryKey(true);
         idColumnConfig.setKeyType(KeyType.Generator);
         idColumnConfig.setKeyValue(KeyGenerators.snowFlakeId);
+
         // 策略配置
         globalConfig.getStrategyConfig()
-                .setTablePrefix("tb_","t_")
-                .setLogicDeleteColumn("delete")
+                .setTablePrefix("tb_","t_","b_")
+                .setLogicDeleteColumn("deleted")
                 .setColumnConfig(idColumnConfig)
-                .setIgnoreColumns("delete");
+                .setIgnoreColumns();
 
         // 模板配置
         globalConfig.getTemplateConfig()
@@ -99,6 +100,10 @@ public class Codegen {
 
         // Controller 配置
         globalConfig.getControllerConfig();
+
+        // TableDef 配置
+        globalConfig.getTableDefConfig()
+                .setOverwriteEnable(true);
 
         // MapperXml 配置
         globalConfig.getMapperXmlConfig();

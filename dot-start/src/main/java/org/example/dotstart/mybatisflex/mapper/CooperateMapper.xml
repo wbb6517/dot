@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.dotstart.mybatisflex.mapper.CooperateMapper">
+    <resultMap id="BaseResultMap" type="org.example.dotstart.mybatisflex.entity.CooperateEntity">
+        <id column="cooperate_id" jdbcType="BIGINT" property="cooperateId"/>
+        <result column="project_id" jdbcType="BIGINT" property="projectId"/>
+        <result column="project_name" jdbcType="VARCHAR" property="projectName"/>
+        <result column="user_id" jdbcType="BIGINT" property="userId"/>
+        <result column="status" jdbcType="VARCHAR" property="status"/>
+        <result column="type" jdbcType="VARCHAR" property="type"/>
+        <result column="cooperate_content" jdbcType="CLOB" property="cooperateContent"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="creator" jdbcType="VARCHAR" property="creator"/>
+        <result column="updater" jdbcType="VARCHAR" property="updater"/>
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+        <result column="deleted" jdbcType="BIT" property="deleted"/>
+        <result column="project_rule" jdbcType="VARCHAR" property="projectRule"/>
+        <result column="member_status" jdbcType="VARCHAR" property="memberStatus"/>
+        <result column="stop_item" jdbcType="BIT" property="stopItem"/>
+        <result column="join_status" jdbcType="BIT" property="joinStatus"/>
+        <result column="apply_status" jdbcType="BIT" property="applyStatus"/>
+        <result column="refuse_status" jdbcType="INTEGER" property="refuseStatus"/>
+        <result column="stop_continue" jdbcType="BIT" property="stopContinue"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        `cooperate_id`, `project_id`, `project_name`, `user_id`, `status`, `type`, `cooperate_content`, `create_time`, `creator`, `updater`, `update_time`, `deleted`, `project_rule`, `member_status`, `stop_item`, `join_status`, `apply_status`, `refuse_status`, `stop_continue`
+    </sql>
+
+</mapper>

@@ -1,17 +1,17 @@
 package org.example.dotstart.mybatisflex.mapper;
 
-import org.example.dotstart.mybatisflex.entity.AccountEntity;
+import org.example.dotstart.mybatisflex.entity.ArticleEntity;
 import com.mybatisflex.core.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
- * 访问 映射层。
+ * 文章推荐 映射层。
  *
  * @author wbb
  * @since 0.0.1
  */
 @Mapper
-public interface AccountMapper extends BaseMapper<AccountEntity> {
+public interface ArticleMapper extends BaseMapper<ArticleEntity> {
 
 
 }
