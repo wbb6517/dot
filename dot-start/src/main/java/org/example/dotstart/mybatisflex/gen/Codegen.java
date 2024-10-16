@@ -7,7 +7,6 @@ import com.mybatisflex.codegen.config.EntityConfig;
 import com.mybatisflex.codegen.config.GlobalConfig;
 import com.mybatisflex.core.keygen.KeyGenerators;
 import com.zaxxer.hikari.HikariDataSource;
-import org.apache.ibatis.type.JdbcType;
 
 public class Codegen {
 
@@ -107,8 +106,6 @@ public class Codegen {
 
         // MapperXml 配置
         globalConfig.getMapperXmlConfig();
-
-
 
 
         return globalConfig;
