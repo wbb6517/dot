@@ -25,9 +25,28 @@ private Unit1Service unit1Service;
 
     @GetMapping("/1")
     @Operation(summary = "88.合并两个有序数组")
-
     public boolean getDemo1() {
         unit1Service.getDemo1();
+        return true;
+    }
+
+    @GetMapping("/2")
+    @Operation(summary = "27.移除元素")
+    public boolean getDemo2() {
+        unit1Service.getDemo2();
+        return true;
+    }
+    @GetMapping("/3")
+    @Operation(summary = "26.删除有序数组中的重复项")
+    public boolean getDemo3() {
+        unit1Service.getDemo3();
+        return true;
+    }
+
+    @GetMapping("/4")
+    @Operation(summary = "80.删除有序数组中的重复项 Ⅱ")
+    public boolean getDemo4() {
+        unit1Service.getDemo4();
         return true;
     }
 
