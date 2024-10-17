@@ -1,4 +1,4 @@
-package org.example.mybatisflex.config;
+package org.example.leetcode.config;
 
 
 import org.springdoc.core.models.GroupedOpenApi;
@@ -7,17 +7,17 @@ import org.springframework.context.annotation.Configuration;
 
 
 @Configuration(proxyBeanMethods = false)
-public class FlexSwaggerGroupConfiguration {
+public class LeetcodeSwaggerGroupConfiguration {
 
     /**
      * 当前模块的 API 分组
      */
     @Bean
-    public GroupedOpenApi flexGroupedOpenApi() {
+    public GroupedOpenApi leetcodeGroupedOpenApi() {
         return GroupedOpenApi.builder()
-                .group("mybatis-flex")
+                .group("leetcode")
                 .pathsToMatch("/**")
-                .packagesToScan("org.example.mybatisflex.controller")
+                .packagesToScan("org.example.leetcode.controller")
                 .build();
     }
 

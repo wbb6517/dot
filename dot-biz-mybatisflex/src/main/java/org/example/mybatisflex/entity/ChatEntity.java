@@ -1,5 +1,6 @@
 package org.example.mybatisflex.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.mybatisflex.annotation.Column;
 import com.mybatisflex.annotation.Id;
 import com.mybatisflex.annotation.KeyType;
@@ -68,6 +69,7 @@ public class ChatEntity {
      */
     @Schema(description = "创建时间")
     @Column(value = "create_time")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date createTime;
 
     /**
@@ -89,6 +91,7 @@ public class ChatEntity {
      */
     @Schema(description = "更新时间")
     @Column(value = "update_time")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date updateTime;
 
     /**
