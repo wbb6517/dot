@@ -16,6 +16,7 @@
         <module>dot-biz-mybatisflex</module>
         <module>dot-biz-leetcode</module>
         <module>dot-sys-framework</module>
+        <module>dot-biz-geotools</module>
     </modules>
 
     <properties>
