@@ -28,7 +28,7 @@ import javax.sql.DataSource;
 import java.util.List;
 
 @Configuration
-@MapperScan(value = "org.example.mybatisflex.mapper", sqlSessionTemplateRef = "sqlSessionTemplate", markerInterface = BaseMapper.class)
+@MapperScan(value = "org.example.**", sqlSessionTemplateRef = "sqlSessionTemplate", markerInterface = BaseMapper.class)
 public class MybatisFlexAutoConfiguration extends com.mybatisflex.spring.boot.MybatisFlexAutoConfiguration {
     public MybatisFlexAutoConfiguration(MybatisFlexProperties properties,
                                         ObjectProvider<Interceptor[]> interceptorsProvider,

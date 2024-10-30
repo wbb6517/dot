@@ -6,3 +6,8 @@ spring:
     name: dot-start
   profiles:
     active: dev
+
+file:
+  ip-address:
+  save-path: E:\data\yced\file
+  save-type: local

@@ -13,9 +13,9 @@ public class Codegen {
     public static void main(String[] args) {
         //配置数据源
         HikariDataSource dataSource = new HikariDataSource();
-        dataSource.setJdbcUrl("jdbc:mysql://127.0.0.1:3306/flex_test?useInformationSchema=true&characterEncoding=utf-8");
-        dataSource.setUsername("root");
-        dataSource.setPassword("123456");
+        dataSource.setJdbcUrl("jdbc:mysql://192.168.21.24:30003/yced_survey_db?useSSL=false&serverTimezone=GMT%2B8&allowPublicKeyRetrieval=true&allowMultiQueries=true");
+        dataSource.setUsername("yced_survey_db");
+        dataSource.setPassword("yced_survey_db");
 
         //创建配置内容，两种风格都可以。
         GlobalConfig globalConfig = createGlobalConfigUseStyle1();
@@ -33,7 +33,7 @@ public class Codegen {
         GlobalConfig globalConfig = new GlobalConfig();
 
         // 设置表前缀和只生成哪些表
-        globalConfig.setGenerateTable("tb_account","b_banner");
+        globalConfig.setGenerateTable("upload_file_info");
 
         // 生成文件
         globalConfig.enableEntity();

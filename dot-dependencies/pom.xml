@@ -81,6 +81,13 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+            <!-- ulid生成器-->
+            <dependency>
+                <groupId>com.github.f4b6a3</groupId>
+                <artifactId>ulid-creator</artifactId>
+                <version>5.2.3</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

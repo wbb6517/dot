@@ -23,7 +23,7 @@ import javax.sql.DataSource;
 import java.util.List;
 
 @Configuration
-@MapperScan( value = "org.example.mybatisflex.mapper",sqlSessionTemplateRef = "plusSqlSessionTemplate",markerInterface = BaseMapper.class)
+@MapperScan( value = "org.example.**",sqlSessionTemplateRef = "plusSqlSessionTemplate",markerInterface = BaseMapper.class)
 public class MybatisPlusAutoConfiguration extends com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration {
     public MybatisPlusAutoConfiguration(MybatisPlusProperties properties,
                                         ObjectProvider<Interceptor[]> interceptorsProvider,
